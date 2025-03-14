@@ -11,9 +11,10 @@ colcon build --symlink-install
 ```
 
 ## 啟動機器人Rviz
-
+```bash
 ros2 launch scout_description demo.launch.py
-
+```
 ## 啟動moveit
-
+```bash
 ros2 launch scout_robot_moveit_config demo.launch.py
+```
