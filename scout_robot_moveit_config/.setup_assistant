@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: scout_description
+    relative_path: urdf/combined_robot_doublearm.xacro
+  srdf:
+    relative_path: config/combined_robot.srdf
+  package_settings:
+    author_name: jin
+    author_email: jin@yah.com.tw
+    generated_timestamp: 1740379791
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
