@@ -2,23 +2,22 @@
 controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
+    # 需要添加這個部分，列出所有要加載的控制器名稱
+    controller_names:
+      - right_arm_controller
+      - left_arm_controller
+      - right_gripper_controller
+      - left_gripper_controller
+      - joint_state_broadcaster
 
     right_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
-
-
     left_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
-
-
     right_gripper_controller:
       type: position_controllers/GripperActionController
-
-
     left_gripper_controller:
       type: position_controllers/GripperActionController
-
-
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
@@ -36,6 +35,7 @@ right_arm_controller:
     state_interfaces:
       - position
       - velocity
+
 left_arm_controller:
   ros__parameters:
     joints:
@@ -50,9 +50,11 @@ left_arm_controller:
     state_interfaces:
       - position
       - velocity
+
 right_gripper_controller:
   ros__parameters:
     joint: arm1joint7
+
 left_gripper_controller:
   ros__parameters:
     joint: arm2joint7

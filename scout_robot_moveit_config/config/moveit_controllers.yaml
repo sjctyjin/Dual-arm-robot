@@ -11,6 +11,7 @@ moveit_simple_controller_manager:
 
   right_arm_controller:
     type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
     joints:
       - arm1joint1
       - arm1joint2
@@ -20,6 +21,7 @@ moveit_simple_controller_manager:
       - arm1joint6
   left_arm_controller:
     type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
     joints:
       - arm2joint1
       - arm2joint2
