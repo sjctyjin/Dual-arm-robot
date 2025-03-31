@@ -14,8 +14,6 @@
     </inertial>
   </link>
 
-    
-    
  <!-- Piper 機器人連接 -->
   <joint name="zyx_piper_base_joint" type="fixed">
     <origin xyz="0.0 0 0.0" rpy="1.57 1.57 0"/>
